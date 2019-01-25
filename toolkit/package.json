@@ -1,0 +1,25 @@
+{
+  "name": "@mercury/toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "./dist/cli.js",
+  "preferGlobal": true,
+  "author": "Pascal Wilbrink<Pascal.Wilbrink@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "change-case": "^3.1.0",
+    "commander": "^2.19.0",
+    "handlebars": "^4.0.12",
+    "inquirer": "^6.2.1",
+    "ora": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/change-case": "^2.3.1",
+    "@types/commander": "^2.12.2",
+    "@types/handlebars": "^4.0.40",
+    "@types/inquirer": "0.0.43",
+    "@types/ora": "^3.0.0"
+  }
+}
