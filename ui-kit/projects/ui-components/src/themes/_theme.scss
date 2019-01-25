@@ -1,5 +1,7 @@
 @import '../button/button-theme.scss';
+@import '../card/card-theme.scss';
 
 @mixin hg-theme($theme) {
     @include hg-button-theme($theme);
+    @include hg-card-theme($theme);
 }
