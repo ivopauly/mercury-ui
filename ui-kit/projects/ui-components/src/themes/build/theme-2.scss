@@ -1,0 +1,6 @@
+@import '../theme';
+
+@include hg-theme((
+    primary: #00Ff00,
+    secondary: #FFF000
+));

@@ -1,0 +1,5 @@
+@import '../button/button-theme.scss';
+
+@mixin hg-theme($theme) {
+    @include hg-button-theme($theme);
+}

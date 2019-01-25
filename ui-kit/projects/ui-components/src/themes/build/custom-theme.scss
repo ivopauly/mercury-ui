@@ -1,0 +1,9 @@
+@import '../theme';
+
+@include hg-theme((
+    button: (
+        padding: 8px 16px
+    ),
+    primary: #FF0000,
+    secondary: #FFF000
+));

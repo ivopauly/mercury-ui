@@ -1,0 +1,13 @@
+@mixin hg-button-theme($theme) {
+
+    .hg-button {
+        background: map-get($theme, primary);
+        padding: map-get(map-get($theme, button), padding);
+
+        &[disabled] {
+            background: lighten(desaturate(map-get($theme, primary), 60%), 20%);
+            color: #202020;
+        }
+    }
+
+}
