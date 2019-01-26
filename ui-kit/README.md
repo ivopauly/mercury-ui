@@ -1,5 +1,7 @@
 # Mercury UI Components
 
+[![Build Status](https://travis-ci.com/pascalwilbrink/mercury-ui.svg?branch=master)](https://travis-ci.org/pascalwilbrink/mercury-ui)
+
 ### Storybook
 Run `npm run storybook` for debugging sandboxed Angular Elements. Navigate to `http://localhost:9001/`. The storybook will be automatically updated when chaning any of the source files.
 
