@@ -14,5 +14,6 @@ before_script:
   - npm install
 
 script:
+  - cd ui-kit
   - npm run test-components
   - npm run build-components
