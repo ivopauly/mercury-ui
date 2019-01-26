@@ -9,7 +9,9 @@ storiesOf('Mercury Button', module)
             imports: [ButtonModule]
         },
         template: `
-        <hg-button (click)="onClick()">Default button</hg-button>
+            <button hg-button color="primary" (click)="onClick()">Default button</button>
+            <button hg-button color="secondary" (click)="onClick()">Secondary button</button>
+            <button hg-button color="accent" (click)="onClick()">Accent button</button>
         `,
         props: {
             onClick: action('Clicked')
@@ -21,11 +23,13 @@ storiesOf('Mercury Button', module)
             imports: [ButtonModule]
         },
         template: `
+            <button hg-button (click)="onClick()" color="primary" [disabled]="disabled">Primary button</button>
+            <button hg-button (click)="onClick()" color="secondary" [disabled]="disabled">Secondary button</button>
+            <button hg-button (click)="onClick()" color="accent" [disabled]="disabled">Accent button</button>
             <label>
+                Disable buttons
                 <input type="checkbox" [(ngModel)]="disabled" />
-                Disable button
             </label>
-            <hg-button (click)="onClick()" [disabled]="disabled">Disabled button</hg-button>
         `,
         props: {
             disabled: true,
@@ -38,7 +42,9 @@ storiesOf('Mercury Button', module)
             imports: [ButtonModule]
         },
         template: `
-        <hg-button (click)="onClick()" rounded>Rounded button</hg-button>
+        <button hg-button color="primary" (click)="onClick()" rounded>Primary button</button>
+        <button hg-button color="secondary" (click)="onClick()" rounded>Secondary button</button>
+        <button hg-button color="accent" (click)="onClick()" rounded>Accent button</button>
         `,
         props: {
             onClick: action('Clicked')

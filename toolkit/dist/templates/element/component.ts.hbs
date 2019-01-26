@@ -3,17 +3,22 @@ import {
     ElementRef
 } from '@angular/core'
 
+{{#if coloredComponent}}
+import { ColorElement } from '../core/color-element'
+{{else}}
+import { Element } from '../core/element'
+{{/if}}
 
 @Component({
-    selector: 'hg-{{componentSelector}}',
-    exportAs: '{{componentName}}',
-    templateUrl: '{{componentTemplate}}',
-    styleUrls: ['{{componentStyle}}']
+    selector: 'hg-{{component.selector}}',
+    exportAs: '{{component.name}}',
+    templateUrl: '{{component.template}}',
+    styleUrls: ['{{component.style}}']
 })
-export class {{componentName}} {
+export class {{component.name}} extends {{#if coloredComponent}}ColorElement{{else}}Element{{/if}} {
 
     constructor(elementRef: ElementRef) {
-
+        super(elementRef)
     }
 
 }

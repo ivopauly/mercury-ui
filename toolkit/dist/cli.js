@@ -45,57 +45,86 @@ var path_1 = __importDefault(require("path"));
 var util_1 = require("util");
 var chalk_1 = __importDefault(require("chalk"));
 var commander_1 = __importDefault(require("commander"));
+var inquirer_1 = __importDefault(require("inquirer"));
 var change_case_1 = require("change-case");
 var handlebars_1 = __importDefault(require("handlebars"));
-var stat = util_1.promisify(fs_1.default.stat), mkDir = util_1.promisify(fs_1.default.mkdir), readDir = util_1.promisify(fs_1.default.readdir), readFile = util_1.promisify(fs_1.default.readFile), writeFile = util_1.promisify(fs_1.default.writeFile);
+var mkDir = util_1.promisify(fs_1.default.mkdir), readFile = util_1.promisify(fs_1.default.readFile), writeFile = util_1.promisify(fs_1.default.writeFile);
 var generateElement = function (name) { return __awaiter(_this, void 0, void 0, function () {
-    var cwd, elementDir;
     var _this = this;
     return __generator(this, function (_a) {
-        console.log(chalk_1.default.blue('Generating element'));
-        cwd = process.cwd();
-        elementDir = path_1.default.join(cwd, change_case_1.paramCase(name));
-        fs_1.default.stat(elementDir, function (err, stats) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!(err && err.errno === 34)) return [3 /*break*/, 1];
-                        return [2 /*return*/, console.error(chalk_1.default.red('Directory already exists'))];
-                    case 1: return [4 /*yield*/, mkDir(elementDir)];
-                    case 2:
-                        _a.sent();
-                        return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'index.ts.hbs'), path_1.default.join(elementDir, 'index.ts'), {})];
-                    case 3:
-                        _a.sent();
-                        return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'public_api.ts.hbs'), path_1.default.join(elementDir, 'public_api.ts'), {
-                                moduleName: change_case_1.paramCase(name) + ".module",
-                                componentName: "" + change_case_1.paramCase(name)
-                            })];
-                    case 4:
-                        _a.sent();
-                        return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'module.ts.hbs'), path_1.default.join(elementDir, change_case_1.paramCase(name) + ".module.ts"), {
-                                componentName: change_case_1.pascalCase(name),
-                                componentClass: change_case_1.paramCase(name),
-                                moduleName: change_case_1.pascalCase(name) + "Module"
-                            })];
-                    case 5:
-                        _a.sent();
-                        return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'component.ts.hbs'), path_1.default.join(elementDir, name + ".ts"), {
-                                componentName: "" + change_case_1.pascalCase(name),
-                                componentSelector: "" + change_case_1.paramCase(name),
-                                componentStyle: change_case_1.paramCase(name) + ".scss",
-                                componentTemplate: change_case_1.paramCase(name) + ".html"
-                            })];
-                    case 6:
-                        _a.sent();
-                        return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'readme.md.hbs'), path_1.default.join(elementDir, 'readme.md'), {})];
-                    case 7:
-                        _a.sent();
-                        _a.label = 8;
-                    case 8: return [2 /*return*/];
-                }
-            });
-        }); });
+        inquirer_1.default.prompt([
+            {
+                type: 'confirm',
+                default: true,
+                message: 'Use theme?',
+                name: 'theming'
+            },
+            {
+                type: 'confirm',
+                default: true,
+                message: 'Use coloring theme?',
+                name: 'coloredComponent'
+            }
+        ]).then(function (answers) {
+            console.log(chalk_1.default.blue('Generating element'));
+            var useTheming = answers.theming;
+            var cwd = process.cwd();
+            var elementDir = path_1.default.join(cwd, change_case_1.paramCase(name));
+            var model = {
+                module: {
+                    location: change_case_1.paramCase(name) + ".module",
+                    name: change_case_1.pascalCase(name) + "Module"
+                },
+                component: {
+                    location: "" + change_case_1.paramCase(name),
+                    name: change_case_1.pascalCase(name),
+                    style: change_case_1.paramCase(name) + ".scss",
+                    template: change_case_1.paramCase(name) + ".html",
+                    selector: "" + change_case_1.paramCase(name)
+                },
+                theme: {
+                    location: change_case_1.paramCase(name) + "-theme.scss",
+                    name: change_case_1.paramCase(name)
+                },
+                coloredComponent: answers.coloredComponent
+            };
+            fs_1.default.stat(elementDir, function (err, stats) { return __awaiter(_this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!(err && err.errno === 34)) return [3 /*break*/, 1];
+                            return [2 /*return*/, console.error(chalk_1.default.red('Directory already exists'))];
+                        case 1: return [4 /*yield*/, mkDir(elementDir)];
+                        case 2:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'public_api.ts.hbs'), path_1.default.join(elementDir, 'public_api.ts'), model)];
+                        case 3:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'module.ts.hbs'), path_1.default.join(elementDir, change_case_1.paramCase(name) + ".module.ts"), model)];
+                        case 4:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'component.ts.hbs'), path_1.default.join(elementDir, name + ".ts"), model)];
+                        case 5:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'component.html.hbs'), path_1.default.join(elementDir, model.component.template), model)];
+                        case 6:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'component.scss.hbs'), path_1.default.join(elementDir, model.component.style), model)];
+                        case 7:
+                            _a.sent();
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'readme.md.hbs'), path_1.default.join(elementDir, 'readme.md'), model)];
+                        case 8:
+                            _a.sent();
+                            if (!useTheming) return [3 /*break*/, 10];
+                            return [4 /*yield*/, templateFile(path_1.default.join(__dirname, 'templates', 'element', 'component-theme.scss.hbs'), path_1.default.join(elementDir, model.theme.location), model)];
+                        case 9:
+                            _a.sent();
+                            _a.label = 10;
+                        case 10: return [2 /*return*/];
+                    }
+                });
+            }); });
+        });
         return [2 /*return*/];
     });
 }); };

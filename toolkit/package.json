@@ -6,6 +6,12 @@
   "preferGlobal": true,
   "author": "Pascal Wilbrink<Pascal.Wilbrink@gmail.com>",
   "license": "ISC",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "tsc": "tsc",
+    "copy-template": "copyfiles -u 2 ./src/templates/**/*.hbs ./dist/templates",
+    "build": "npm run clean && npm run tsc && npm run copy-template"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "change-case": "^3.1.0",
@@ -20,6 +26,8 @@
     "@types/commander": "^2.12.2",
     "@types/handlebars": "^4.0.40",
     "@types/inquirer": "0.0.43",
-    "@types/ora": "^3.0.0"
+    "@types/ora": "^3.0.0",
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.3"
   }
 }

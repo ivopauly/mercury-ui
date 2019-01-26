@@ -1,0 +1,32 @@
+@import './functions';
+
+@mixin hg-colors($theme) {
+
+    .hg-primary {
+        background: get-color($theme, primary);
+        color: get-color($theme, primary-text);
+
+        &[disabled] {
+            background: lighten(desaturate(get-color($theme, primary), 60%), 20%);
+        }
+    }
+
+    .hg-secondary {
+        background: get-color($theme, secondary);
+        color: get-color($theme, secondary-text);
+
+        &[disabled] {
+            background: lighten(desaturate(get-color($theme, secondary), 60%), 20%);
+        }
+    }
+
+    .hg-accent {
+        background: get-color($theme, accent);
+        color: get-color($theme, accent-text);
+
+        &[disabled] {
+            background: lighten(desaturate(get-color($theme, accent), 60%), 20%);
+        }
+    }
+
+}

@@ -1,0 +1,8 @@
+@import './functions';
+
+@mixin hg-common($theme) {
+    * {
+        transition: .2s all;
+        font-weight: 600;
+    }
+}

@@ -23,12 +23,6 @@
       ],
       "@mercury/ui-components/*": [
         "dist/ui-components/*"
-      ],
-      "@mercury/themes": [
-        "dist/themes"
-      ],
-      "@mercury/themes/*": [
-        "dist/themes/*"
       ]
     }
   }

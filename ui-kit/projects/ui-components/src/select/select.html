@@ -1,0 +1,20 @@
+<div
+    cdk-overlay-origin
+    class="hg-select-trigger"
+    (click)="toggle()"
+    #origin="cdkOverlayOrigin"
+    #trigger>
+</div>
+
+<ng-template
+    cdk-connected-overlay
+    cdkConnectedOverlayLockPosition
+    cdkConnectedOverlayHasBackdrop
+    [cdkConnectedOverlayOpen]="panelOpen"
+    [cdkConnectedOverlayOrigin]="origin"
+    (attach)="_onAttached()"
+    (detach)="close()">
+    <div>
+        <ng-content></ng-content>
+    </div>
+</ng-template>

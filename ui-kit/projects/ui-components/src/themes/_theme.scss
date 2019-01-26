@@ -1,7 +1,13 @@
-@import '../button/button-theme.scss';
+@import '../style//common';
+@import '../style//colors';
 @import '../card/card-theme.scss';
+@import '../button/button-theme.scss';
+@import '../checkbox/checkbox-theme.scss';
 
 @mixin hg-theme($theme) {
-    @include hg-button-theme($theme);
+    @include hg-common($theme);
+    @include hg-colors($theme);
     @include hg-card-theme($theme);
+    @include hg-button-theme($theme);
+    @include hg-checkbox-theme($theme);
 }

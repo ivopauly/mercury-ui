@@ -1,0 +1,26 @@
+label {
+    cursor: inherit;
+    align-items: baseline;
+    vertical-align: middle;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.hg-checkbox-container {
+    width: 32px;
+    height: 32px;
+    border: 2px solid black;
+    position: relative;
+
+    input {
+        display: none;
+    }
+
+    .hg-checkbox-background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}

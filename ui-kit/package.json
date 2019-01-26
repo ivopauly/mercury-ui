@@ -7,8 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "compodoc": "compodoc -p projects/ui-components/tsconfig.lib.json -s -o -w",
+    "build-components": "ng build --project=ui-components",
+    "test-components": "ng test --project=ui-components"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "@compodoc/compodoc": "^1.1.7",
     "@storybook/addons": "^4.1.11",
     "core-js": "^2.5.4",
     "node-sass": "^4.11.0",

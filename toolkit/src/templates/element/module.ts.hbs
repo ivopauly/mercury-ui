@@ -2,19 +2,18 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    {{componentName}}
-} from './{{componentClass}}'
-
+    {{component.name}}
+} from './{{component.location}}'
 
 @NgModule({
     imports: [
         CommonModule
     ],
     exports: [
-        {{componentName}}
+        {{component.name}}
     ],
     declarations: [
-        {{componentName}}
+        {{component.name}}
     ]
 })
-export class {{moduleName}} {}
+export class {{module.name}} {}
