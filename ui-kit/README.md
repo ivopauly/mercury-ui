@@ -24,7 +24,7 @@ import { storiesOf } from '@storybook/angular'
 
 import { ... } from 'projects/ui-components/src/public_api'
 
-storiesOf('Mercury Card', module)
+storiesOf('Mercury [element]', module)
     .add('Default', () => ({
         moduleMetadata: {
             imports: [
