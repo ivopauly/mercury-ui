@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 
-import { Toast } from 'projects/ui-components/src/public_api'
+import { HgToast } from 'projects/ui-components/src/public_api'
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
 
   private _index: number = 0
   constructor(
-    private toast: Toast
+    private toast: HgToast
   ) {}
 
   showToast() {

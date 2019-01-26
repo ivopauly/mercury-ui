@@ -2,7 +2,7 @@ import { async, TestBed } from '@angular/core/testing'
 import { Component } from '@angular/core'
 import { By } from '@angular/platform-browser'
 
-import { ButtonModule } from './button.module'
+import { HgButtonModule } from './button.module'
 
 import { ThemeColor } from '../core/color-element'
 
@@ -10,7 +10,7 @@ describe('Mercury Button', () => {
 
     beforeEach( async( () => {
         TestBed.configureTestingModule({
-            imports: [ButtonModule],
+            imports: [HgButtonModule],
             declarations: [TestApp]
         })
 
