@@ -30,20 +30,113 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="uikit">UiKit</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 7.0.4.</p>
-<h2 id="development-server">Development server</h2>
+<h1 id="mercury-ui-components">Mercury UI Components</h1>
+<h3 id="storybook">Storybook</h3>
+<p>Run <code>npm run storybook</code> for debugging sandboxed Angular Elements. Navigate to <code>http://localhost:9001/</code>. The storybook will be automatically updated when chaning any of the source files.</p>
+<h3 id="documentation">Documentation</h3>
+<p>Run <code>npm run compodoc</code> for live documentation. Navigate to <code>http://localhost:8080/</code>. The documentation will be automatically updated when changing any of the source files.</p>
+<h3 id="development-server">Development server</h3>
 <p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+<h4 id="creating-new-elements">Creating new Elements</h4>
+<p>To create a new Angular Element, cd into the projects/ui-components/src directory. In here, run `toolkit generate element [element-name] to scaffold a new Angular Element. Once generated, add the public_api to projects/ui-components/src/public_api.ts.</p>
+<div><pre class="line-numbers"><code class="language-ts">export * from &#39;./[element-name]/public_api&#39;</code></pre></div><p>In src/stories, add a new ts file to develop the Element in a sandboxed environment.</p>
+<p>[element-name].ts</p>
+<div><pre class="line-numbers"><code class="language-ts">import { storiesOf } from &#39;&#64;storybook/angular&#39;
+
+import { ... } from &#39;projects/ui-components/src/public_api&#39;
+
+storiesOf(&#39;Mercury Card&#39;, module)
+    .add(&#39;Default&#39;, () =&gt; ({
+        moduleMetadata: {
+            imports: [
+                ...
+            ]
+        },
+        template: `
+            ...
+        `,
+        props: {
+        }
+    }))</code></pre></div><p>Add the story to the index.ts file in src/stories and the Storybook will be live reloaded.</p>
+<h3 id="elements">Elements</h3>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Button</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Card</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Checkbox</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>List</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Sidenav</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Slider</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Toolbar</td>
+<td>WIP</td>
+</tr>
+<tr>
+<td>Typograpy</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>Common styling</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-projects">Other projects</h3>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example project</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>Online documentation</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<h4 id="questions">Questions</h4>
+<p>Feel free to email me [at] <a href="mailto:Pascal.Wilbrink@gmail.com">Pascal.Wilbrink@gmail.com</a> if you have any questions.</p>
+<h3 id="license">License</h3>
+<h2 id="license">License</h2>
+<p>Apache 2.0</p>
 
 
 
