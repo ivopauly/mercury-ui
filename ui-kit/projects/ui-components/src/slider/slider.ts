@@ -11,7 +11,7 @@ import { Element } from '../core/element'
     templateUrl: 'slider.html',
     styleUrls: ['slider.scss']
 })
-export class Slider extends Element {
+export class HgSlider extends Element {
 
     constructor(elementRef: ElementRef) {
         super(elementRef)

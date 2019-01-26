@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core'
 import { OverlayModule } from '@angular/cdk/overlay'
 
 import {
-    Toast, ToastComponent
+    HgToast, HgToastComponent
 } from './toast'
 
 @NgModule({
@@ -13,17 +13,16 @@ import {
         OverlayModule
     ],
     declarations: [
-        ToastComponent
+        HgToastComponent
     ],
     providers: [
-        Toast
+        HgToast
     ],
     entryComponents: [
-        ToastComponent
+        HgToastComponent
     ],
     exports: [
-        ToastComponent
     ]
 })
-export class ToastModule {}
+export class HgToastModule {}
 

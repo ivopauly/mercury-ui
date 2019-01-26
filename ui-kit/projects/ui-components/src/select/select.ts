@@ -17,7 +17,7 @@ import { Element } from '../core/element'
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Select extends Element {
+export class HgSelect extends Element {
 
     private _panelOpen: boolean = false
     private _changeDetectorRef: ChangeDetectorRef

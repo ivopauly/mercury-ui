@@ -11,12 +11,12 @@ import { Element } from '../core/element'
 @Component({
     selector: 'hg-select-item',
     exportAs: 'SelectItem',
-    templateUrl: 'select-item.html',
-    styleUrls: ['select.scss'],
+    templateUrl: './select-item.html',
+    styleUrls: ['./select.scss'],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SelectItem extends Element {
+export class HgSelectItem extends Element {
 
     constructor(
         elementRef: ElementRef

@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core'
 import { OverlayModule } from '@angular/cdk/overlay'
 
 import {
-    Select
+    HgSelect
 } from './select'
 
 import {
-    SelectItem
+    HgSelectItem
 } from './select-item'
 
 @NgModule({
@@ -17,12 +17,12 @@ import {
         OverlayModule
     ],
     exports: [
-        Select,
-        SelectItem
+        HgSelect,
+        HgSelectItem
     ],
     declarations: [
-        Select,
-        SelectItem
+        HgSelect,
+        HgSelectItem
     ]
 })
-export class SelectModule {}
+export class HgSelectModule {}

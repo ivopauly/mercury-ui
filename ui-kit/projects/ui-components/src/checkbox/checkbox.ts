@@ -20,13 +20,13 @@ export enum TransitionCheckState {
 }
 
 export class CheckboxChangeEvent {
-    source: Checkbox
+    source: HgCheckbox
     checked: boolean
 }
 
 export const CHECKBOX_CONTROL_VALUE_ACCESSOR: any = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => Checkbox),
+    useExisting: forwardRef(() => HgCheckbox),
     multi: true
 }
 
@@ -41,7 +41,7 @@ export const CHECKBOX_CONTROL_VALUE_ACCESSOR: any = {
         '[class.hg-checkbox-checked]': 'checked'
     }
 })
-export class Checkbox extends ColorElement implements ControlValueAccessor {
+export class HgCheckbox extends ColorElement implements ControlValueAccessor {
 
     private _checked: boolean = false
 

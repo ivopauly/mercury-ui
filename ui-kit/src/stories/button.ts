@@ -2,12 +2,12 @@ import { storiesOf, moduleMetadata } from '@storybook/angular'
 import { action } from '@storybook/addon-actions'
 import { boolean, withKnobs } from '@storybook/addon-knobs'
 import { withNotes } from '@storybook/addon-notes'
-import { ButtonModule } from 'projects/ui-components/src/public_api'
+import { HgButtonModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Button', module)
     .addDecorator(
         moduleMetadata({
-            imports: [ButtonModule]
+            imports: [HgButtonModule]
         })
     )
     .addDecorator(withKnobs)

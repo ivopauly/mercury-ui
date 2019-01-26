@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
 
-import { ToastModule, ButtonModule } from '../../projects/ui-components/src/public_api'
+import { HgToastModule, HgButtonModule } from '../../projects/ui-components/src/public_api'
 
 @NgModule({
   declarations: [
@@ -11,8 +11,8 @@ import { ToastModule, ButtonModule } from '../../projects/ui-components/src/publ
   ],
   imports: [
     BrowserModule,
-    ToastModule,
-    ButtonModule
+    HgToastModule,
+    HgButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

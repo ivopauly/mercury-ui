@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Sidebar
+    HgSidebar
 } from './sidebar'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Sidebar
+        HgSidebar
     ],
     declarations: [
-        Sidebar
+        HgSidebar
     ]
 })
-export class SidebarModule {}
+export class HgSidebarModule {}

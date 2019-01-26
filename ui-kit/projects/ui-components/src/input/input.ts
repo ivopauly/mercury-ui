@@ -11,7 +11,7 @@ import { ColorElement } from '../core/color-element'
     templateUrl: 'input.html',
     styleUrls: ['input.scss']
 })
-export class Input extends ColorElement {
+export class HgInput extends ColorElement {
 
     constructor(elementRef: ElementRef) {
         super(elementRef)

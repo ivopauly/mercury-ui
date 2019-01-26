@@ -16,7 +16,7 @@ import { ColorElement } from '../core/color-element'
     changeDetection: ChangeDetectionStrategy.OnPush,
     inputs: ['color']
 })
-export class Toolbar extends ColorElement {
+export class HgToolbar extends ColorElement {
 
     constructor(elementRef: ElementRef) {
         super(elementRef)

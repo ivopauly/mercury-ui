@@ -11,7 +11,7 @@ import { Element } from '../core/element'
     templateUrl: 'sidebar.html',
     styleUrls: ['sidebar.scss']
 })
-export class Sidebar extends Element {
+export class HgSidebar extends Element {
 
     constructor(elementRef: ElementRef) {
         super(elementRef)

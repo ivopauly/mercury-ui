@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/angular'
 
-import { ToastModule, ButtonModule } from 'projects/ui-components/src/public_api'
+import { HgToastModule, HgButtonModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Toast', module)
     
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [ToastModule, ButtonModule]
+            imports: [HgToastModule, HgButtonModule]
         },
         components: [],
         template: `

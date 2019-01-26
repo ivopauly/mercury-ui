@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Card
+    HgCard
 } from './card'
 
 
@@ -11,10 +11,10 @@ import {
         CommonModule
     ],
     exports: [
-        Card
+        HgCard
     ],
     declarations: [
-        Card
+        HgCard
     ]
 })
-export class CardModule {}
+export class HgCardModule {}

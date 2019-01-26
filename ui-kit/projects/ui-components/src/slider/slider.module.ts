@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Slider
+    HgSlider
 } from './slider'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Slider
+        HgSlider
     ],
     declarations: [
-        Slider
+        HgSlider
     ]
 })
-export class SliderModule {}
+export class HgSliderModule {}

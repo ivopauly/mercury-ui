@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Checkbox
+    HgCheckbox
 } from './checkbox'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Checkbox
+        HgCheckbox
     ],
     declarations: [
-        Checkbox
+        HgCheckbox
     ]
 })
-export class CheckboxModule {}
+export class HgCheckboxModule {}

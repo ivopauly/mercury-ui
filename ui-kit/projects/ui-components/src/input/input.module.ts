@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Input
+    HgInput
 } from './input'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Input
+        HgInput
     ],
     declarations: [
-        Input
+        HgInput
     ]
 })
-export class InputModule {}
+export class HgInputModule {}

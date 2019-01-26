@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/angular'
 
-import { CheckboxModule } from 'projects/ui-components/src/public_api'
+import { HgCheckboxModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Checkbox', module)
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [CheckboxModule]
+            imports: [HgCheckboxModule]
         },
         template: `
             <div style="text-align:center;display:inline-block;width:100px;">

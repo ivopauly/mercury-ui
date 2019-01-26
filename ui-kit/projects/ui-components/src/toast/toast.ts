@@ -6,7 +6,7 @@ import {
     Inject
 } from '@angular/core'
 
-import { ComponentType, ComponentPortal, TemplatePortal, PortalInjector } from '@angular/cdk/portal'
+import { ComponentPortal, PortalInjector } from '@angular/cdk/portal'
 import { OverlayRef, Overlay, OverlayConfig } from '@angular/cdk/overlay'
 
 import { ToastRef } from './toast-ref'
@@ -32,7 +32,7 @@ const DEFAULT_CONFIG: ToastConfig = {
 }
 
 @Injectable()
-export class Toast {
+export class HgToast {
 
     private _openToasts: ToastRef[] = new Array()
     private _overlay: Overlay
@@ -52,8 +52,6 @@ export class Toast {
         }
 
         toastConfig.data.title = text
-
-        console.log(toastConfig, config)
 
         const toastRef: ToastRef = this._open(toastConfig)
 
@@ -103,17 +101,15 @@ export class Toast {
         return new PortalInjector(this._injector, injectionTokens)
     }
 
-    private _attachToastContainer(overlayRef: OverlayRef, config: ToastConfig, toastRef: ToastRef): ToastComponent {
+    private _attachToastContainer(overlayRef: OverlayRef, config: ToastConfig, toastRef: ToastRef): HgToastComponent {
         const injector = this._createInjector(config, toastRef)
 
-        const containerPortal = new ComponentPortal(ToastComponent, null, injector)
-        const containerRef: ComponentRef<ToastComponent> = overlayRef.attach(containerPortal)
+        const containerPortal = new ComponentPortal(HgToastComponent, null, injector)
+        const containerRef: ComponentRef<HgToastComponent> = overlayRef.attach(containerPortal)
 
         return containerRef.instance
     }
 }
-
-
 
 @Component({
     selector: 'hg-toast',
@@ -142,7 +138,7 @@ export class Toast {
         </div>
     `
 })
-export class ToastComponent {
+export class HgToastComponent {
 
     _title: string
     _message: string

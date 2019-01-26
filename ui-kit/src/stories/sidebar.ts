@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/angular'
 
-import { SidebarModule } from 'projects/ui-components/src/public_api'
+import { HgSidebarModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Sidebar', module)
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [SidebarModule]
+            imports: [HgSidebarModule]
         },
         template: `
             <hg-sidebar>

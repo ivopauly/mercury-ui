@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/angular'
 
-import { SelectModule } from 'projects/ui-components/src/public_api'
+import { HgSelectModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Select', module)
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [SelectModule]
+            imports: [HgSelectModule]
         },
         template: `
             <hg-select>

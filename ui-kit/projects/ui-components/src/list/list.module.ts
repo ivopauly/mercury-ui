@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    List
+    HgList
 } from './list'
 
 import { 
-    ListItem
+    HgListItem
 } from './list-item'
 
 @NgModule({
@@ -14,12 +14,12 @@ import {
         CommonModule
     ],
     exports: [
-        List,
-        ListItem
+        HgList,
+        HgListItem
     ],
     declarations: [
-        List,
-        ListItem
+        HgList,
+        HgListItem
     ]
 })
-export class ListModule {}
+export class HgListModule {}

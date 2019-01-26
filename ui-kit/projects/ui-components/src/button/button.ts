@@ -62,7 +62,7 @@ const HOST_ATTRIBUTES = [
         '[disabled]': 'disabled || null'
     }
 })
-export class Button extends ColorElement {
+export class HgButton extends ColorElement {
 
     /**
      * @ignore

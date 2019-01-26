@@ -10,7 +10,7 @@ import {
     templateUrl: 'card.html',
     styleUrls: ['card.scss']
 })
-export class Card {
+export class HgCard {
 
     constructor(elementRef: ElementRef) {
 

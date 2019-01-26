@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Toolbar
+    HgToolbar
 } from './toolbar'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Toolbar
+        HgToolbar
     ],
     declarations: [
-        Toolbar
+        HgToolbar
     ]
 })
-export class ToolbarModule {}
+export class HgToolbarModule {}
