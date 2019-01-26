@@ -15,6 +15,7 @@ before_script:
 
 script:
   - cd ui-kit
+  - npm install
   - npm install -g @angular/cli
   - npm run test-components
   - npm run build-components
