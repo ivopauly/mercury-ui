@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "compodoc": "compodoc -p projects/ui-components/tsconfig.lib.json -s -o -w",
     "build-components": "ng build --project=ui-components",
-    "test-components": "ng test --project=ui-components"
+    "test-components": "ng test --project=ui-components",
+    "travis-ci": "ng test --project=ui-components --no-watch --no-progress --browsers=ChromeHeadlessCI"
   },
   "private": true,
   "dependencies": {
