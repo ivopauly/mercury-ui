@@ -1,13 +1,18 @@
-import { storiesOf } from '@storybook/angular'
+import { storiesOf, moduleMetadata } from '@storybook/angular'
 import { action } from '@storybook/addon-actions'
-
+import { boolean, withKnobs } from '@storybook/addon-knobs'
+import { withNotes } from '@storybook/addon-notes'
 import { ButtonModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Button', module)
-    .add('Default', () => ({
-        moduleMetadata: {
+    .addDecorator(
+        moduleMetadata({
             imports: [ButtonModule]
-        },
+        })
+    )
+    .addDecorator(withKnobs)
+    .addDecorator(withNotes)
+    .add('Default', () => ({
         template: `
             <button hg-button color="primary" (click)="onClick()">Default button</button>
             <button hg-button color="secondary" (click)="onClick()">Secondary button</button>
@@ -16,31 +21,23 @@ storiesOf('Mercury Button', module)
         props: {
             onClick: action('Clicked')
         }
-    }))
+    }), {
+        notes: 'ABC'
+    })
     
     .add('Disabled', () => ({
-        moduleMetadata: {
-            imports: [ButtonModule]
-        },
         template: `
             <button hg-button (click)="onClick()" color="primary" [disabled]="disabled">Primary button</button>
             <button hg-button (click)="onClick()" color="secondary" [disabled]="disabled">Secondary button</button>
             <button hg-button (click)="onClick()" color="accent" [disabled]="disabled">Accent button</button>
-            <label>
-                Disable buttons
-                <input type="checkbox" [(ngModel)]="disabled" />
-            </label>
         `,
         props: {
-            disabled: true,
-            onClick: action('Clicked')
+            disabled: boolean('Disabled', true),
+            onClick: action('Clicked',)
         }
     }))
 
     .add('Rounded', () => ({
-        moduleMetadata: {
-            imports: [ButtonModule]
-        },
         template: `
         <button hg-button color="primary" (click)="onClick()" rounded>Primary button</button>
         <button hg-button color="secondary" (click)="onClick()" rounded>Secondary button</button>

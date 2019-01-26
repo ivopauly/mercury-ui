@@ -49,3 +49,8 @@ export * from './sidebar/public_api'
  * Slider module
  */
 export * from './slider/public_api'
+
+/*
+ * Toast module
+ */
+export * from './toast/public_api'

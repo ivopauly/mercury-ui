@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SelectItem</li>
+  <li>Toast</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/ui-components/src/select/select-item.ts</code>
+    <code>projects/ui-components/src/toast/toast.ts</code>
 </p>
 
 
@@ -69,7 +69,7 @@
         <h3>Extends</h3>
     </p>
     <p class="comment">
-            <code><a href="../classes/Element.html" target="_self" >Element</a></code>
+            <code><a href="../classes/Element.html" target="_self" >ColorElement</a></code>
     </p>
 
 
@@ -79,20 +79,12 @@
     <table class="table table-sm table-hover">
         <tbody>
 
-            <tr>
-                <td class="col-md-3">changeDetection</td>
-                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
-            </tr>
 
-            <tr>
-                <td class="col-md-3">encapsulation</td>
-                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
-            </tr>
 
 
             <tr>
                 <td class="col-md-3">exportAs</td>
-                <td class="col-md-9"><code>SelectItem</code></td>
+                <td class="col-md-9"><code>Toast</code></td>
             </tr>
 
 
@@ -103,19 +95,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>hg-select-item</code></td>
+                <td class="col-md-9"><code>hg-toast</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>select.scss</code></td>
+                <td class="col-md-9"><code>toast.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>select-item.html</code></td>
+                <td class="col-md-9"><code>toast.html</code></td>
             </tr>
 
 
@@ -129,36 +121,6 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#_hasHostAttributes">_hasHostAttributes</a>
-                            </li>
-                            <li>
-                                <a href="#getHostElement">getHostElement</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
 
     <section>
     <h3 id="constructor">Constructor</h3>
@@ -171,7 +133,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/ui-components/src/select/select-item.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/ui-components/src/toast/toast.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -213,141 +175,6 @@
 
 
 
-    <section>
-    
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="_hasHostAttributes"></a>
-                        <span class="name">
-                            <b>
-                            _hasHostAttributes
-                            </b>
-                            <a href="#_hasHostAttributes"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>_hasHostAttributes(...attributes: string[])</code>
-                    </td>
-                </tr>
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from     <code><a href="../classes/Element.html" target="_self" >Element</a></code>
-</div>
-                                </td>
-                            </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in Element:32</div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Checks if the host contains any of the given attributes</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                                    <td>Description</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>attributes</td>
-                                                        <td>
-                                                                    <code>string[]</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                                <code><p>List of possible attributes</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    <p>boolean</p>
-
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="getHostElement"></a>
-                        <span class="name">
-                            <b>
-                            getHostElement
-                            </b>
-                            <a href="#getHostElement"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>getHostElement()</code>
-                    </td>
-                </tr>
-
-
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from     <code><a href="../classes/Element.html" target="_self" >Element</a></code>
-</div>
-                                </td>
-                            </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in Element:21</div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Returns the host element</p>
-</div>
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
 </div>
@@ -356,27 +183,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
     Component,
-    ElementRef,
-    ViewEncapsulation,
-    ChangeDetectionStrategy
+    ElementRef
 } from &#x27;@angular/core&#x27;
 
-
-import { Element } from &#x27;../core/element&#x27;
+import { ColorElement } from &#x27;../core/color-element&#x27;
 
 @Component({
-    selector: &#x27;hg-select-item&#x27;,
-    exportAs: &#x27;SelectItem&#x27;,
-    templateUrl: &#x27;select-item.html&#x27;,
-    styleUrls: [&#x27;select.scss&#x27;],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: &#x27;hg-toast&#x27;,
+    exportAs: &#x27;Toast&#x27;,
+    templateUrl: &#x27;toast.html&#x27;,
+    styleUrls: [&#x27;toast.scss&#x27;]
 })
-export class SelectItem extends Element {
+export class Toast extends ColorElement {
 
-    constructor(
-        elementRef: ElementRef
-    ) {
+    constructor(elementRef: ElementRef) {
         super(elementRef)
     }
 
@@ -385,19 +205,16 @@ export class SelectItem extends Element {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;hg-select-item&quot;&gt;
-    &lt;ng-content&gt;&lt;/ng-content&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">COMPONENT HTML
+
+&lt;ng-content&gt;&lt;/ng-content&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>select.scss</code>
+                    <code>toast.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.hg-select-trigger {
-    height: 20px;
-    background: blue;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -425,10 +242,10 @@ export class SelectItem extends Element {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="hg-select-item">    <ng-content></ng-content></div></div>'
+        var COMPONENT_TEMPLATE = '<div>COMPONENT HTML<ng-content></ng-content></div>'
     var COMPONENTS = [{'name': 'Button', 'selector': 'button[hg-button]'},{'name': 'Card', 'selector': 'hg-card'},{'name': 'Checkbox', 'selector': 'hg-checkbox'},{'name': 'Input', 'selector': 'hg-input'},{'name': 'List', 'selector': 'hg-list'},{'name': 'ListItem', 'selector': 'hg-list-item'},{'name': 'Select', 'selector': 'hg-select'},{'name': 'SelectItem', 'selector': 'hg-select-item'},{'name': 'Sidebar', 'selector': 'hg-sidebar'},{'name': 'Slider', 'selector': 'hg-slider'},{'name': 'Toast', 'selector': 'hg-toast'},{'name': 'Toolbar', 'selector': 'hg-toolbar'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'SelectItem'};
+    var ACTUAL_COMPONENT = {'name': 'Toast'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -462,7 +279,7 @@ export class SelectItem extends Element {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'SelectItem.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'Toast.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

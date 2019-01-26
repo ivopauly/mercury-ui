@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
 
-import { ButtonModule } from '@mercury/ui-components'
+import { ToastModule, ButtonModule } from '../../projects/ui-components/src/public_api'
 
 @NgModule({
   declarations: [
@@ -11,6 +11,7 @@ import { ButtonModule } from '@mercury/ui-components'
   ],
   imports: [
     BrowserModule,
+    ToastModule,
     ButtonModule
   ],
   providers: [],
