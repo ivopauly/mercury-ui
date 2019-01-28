@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    height: 100%;
+
+    .sub-menu {
+        height: 100%;
+        padding-top: 60px;
+        background: lighten(#262730, 5%);
+        border-left: 1px solid rgba(22, 22, 27, .4);
+        width: 220px;
+
+        ul {
+            border-top: 1px solid #262730;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: lighten(#bfc1c3, 2%);
+                display: block;
+                padding: 8px 16px;
+            }
+        }
+
+    }
+
+}

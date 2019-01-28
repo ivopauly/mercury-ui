@@ -1,6 +1,6 @@
 @import '../theme';
 
-@include hg-theme((
+$custom-theme: (
     colors: (
         primary: #D6231E,
         secondary: #2E94B5,
@@ -15,4 +15,6 @@
     card: (
         shadow: 0 3px 5px rgba(0, 0, 0, .3)
     )
-));
+);
+
+@include hg-theme($custom-theme)

@@ -1,7 +1,6 @@
 @mixin hg-card-theme($theme) {
 
     .hg-card {
-        box-shadow: map-get(map-get($theme, card), shadow);
     }
 
 }

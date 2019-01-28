@@ -1,0 +1,10 @@
+@import '../../../../ui-kit/projects/ui-components/src/style/functions';
+@import '../../../../ui-kit/projects/ui-components/src/themes/build/custom-theme.scss';
+
+:host {
+    display: block;
+    background: get-color($custom-theme, accent);
+    height: 100%;
+}
+
+

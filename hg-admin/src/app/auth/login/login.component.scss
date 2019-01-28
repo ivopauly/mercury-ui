@@ -1,0 +1,87 @@
+:host {
+    display: block;
+    padding: 64px 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+hg-card {
+    background: #FFFFFF;
+    display: block;
+    padding: 0 0 32px 0 !important;
+    width: 100%;
+
+    #header {
+        background-image: url('/assets/img/desk.jpg');
+        background-position: center -10px;
+        background-size: cover;
+        height: 136px;
+        width: 100%;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(30, 87, 153, .4);
+            background: -moz-linear-gradient(-45deg, rgba(30, 87, 153, .4) 0%, rgba(41, 137, 216, .4) 50%, rgba(32, 124, 202, .4) 51%,rgba(125, 185, 232, .4) 100%);
+            background: -webkit-linear-gradient(-45deg, rgba(30, 87, 153, .4) 0%,rgba(41, 137, 216, .4) 50%,rgba(32, 124, 202, .4) 51%, rgba(125, 185, 232, .4) 100%);
+            background: linear-gradient(135deg, rgba(30, 87, 153, .4) 0%,rgba(41, 137, 216, .4) 50%,rgba(32, 124, 202, .4) 51%,rgba(125, 185, 232, .4) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+            z-index: 1;
+        }
+
+        
+        h1 {
+            position: relative;
+            top: 64px;
+            left: 50%;
+            display: inline-block;
+            font-size: 1.6em;
+            z-index: 2;
+            margin: 0 0 0 -38px;
+            padding: 0;
+            color: #FFFFFF;
+            text-shadow: 0 -1px 0 rgba(30, 87, 153, .8);
+        }
+        
+    }
+
+    #login-button {
+        width: 100%;
+        display: inline-block;
+    }
+
+}
+
+input {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #DADADA;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 8px;
+
+    &.ng-invalid {
+        border-bottom: 2px solid red;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: lighten(rgb(20, 20, 20), 20%);
+}
+
+*:focus {
+    outline: none;
+}
