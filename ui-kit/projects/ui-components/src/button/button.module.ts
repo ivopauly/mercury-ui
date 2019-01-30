@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 
 import {
-    Button
+    HgButton
 } from './button'
 
 @NgModule({
@@ -10,10 +10,10 @@ import {
         CommonModule
     ],
     exports: [
-        Button
+        HgButton
     ],
     declarations: [
-        Button
+        HgButton
     ]
 })
-export class ButtonModule {}
+export class HgButtonModule {}

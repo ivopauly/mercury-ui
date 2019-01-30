@@ -1,0 +1,38 @@
+@import '../style/functions';
+
+@mixin hg-checkbox-theme($theme) {
+    hg-checkbox.hg-primary,
+    hg-checkbox.hg-secondary,
+    hg-checkbox.hg-accent {
+        background: none;
+    }
+    
+    .hg-checkbox-checked {
+        
+        &.hg-primary {
+            .hg-checkbox-background {
+                background: get-color($theme, primary);
+            }
+        }
+
+        &.hg-secondary {
+            .hg-checkbox-background {
+                background: get-color($theme, secondary);
+            }
+        }
+
+        &.hg-accent {
+            .hg-checkbox-background {
+                background: get-color($theme, accent);
+            }
+        }
+
+    }
+
+    .hg-checkbox-unchecked {
+        .hg-checkbox-background {
+            background: transparent;
+        }
+    }
+
+}

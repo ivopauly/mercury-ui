@@ -1,0 +1,11 @@
+<label>
+    <div class="hg-checkbox-container">
+        <input
+            #input 
+            type="checkbox"
+            [checked]="checked"
+            (change)="_onInteractionEvent($event)"
+            (click)="_onInputClick($event)" />
+        <div class="hg-checkbox-background"></div>
+    </div>
+</label>

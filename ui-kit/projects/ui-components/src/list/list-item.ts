@@ -11,7 +11,7 @@ import { Element } from '../core/element'
     templateUrl: 'list-item.html',
     styleUrls: ['list.scss']
 })
-export class ListItem extends Element {
+export class HgListItem extends Element {
 
     constructor(elementRef: ElementRef) {
         super(elementRef)

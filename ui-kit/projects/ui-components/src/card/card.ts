@@ -7,10 +7,13 @@ import {
 @Component({
     selector: 'hg-card',
     exportAs: 'Card',
-    templateUrl: 'card.html',
-    styleUrls: ['card.scss']
+    templateUrl: './card.html',
+    styleUrls: ['card.scss'],
+    host: {
+        'class': 'hg-card'
+    }
 })
-export class Card {
+export class HgCard {
 
     constructor(elementRef: ElementRef) {
 

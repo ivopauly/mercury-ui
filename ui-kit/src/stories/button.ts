@@ -1,44 +1,47 @@
-import { storiesOf } from '@storybook/angular'
+import { storiesOf, moduleMetadata } from '@storybook/angular'
 import { action } from '@storybook/addon-actions'
-
-import { ButtonModule } from 'projects/ui-components/src/public_api'
+import { boolean, withKnobs } from '@storybook/addon-knobs'
+import { withNotes } from '@storybook/addon-notes'
+import { HgButtonModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Button', module)
+    .addDecorator(
+        moduleMetadata({
+            imports: [HgButtonModule]
+        })
+    )
+    .addDecorator(withKnobs)
+    .addDecorator(withNotes)
     .add('Default', () => ({
-        moduleMetadata: {
-            imports: [ButtonModule]
-        },
         template: `
-        <hg-button (click)="onClick()">Default button</hg-button>
+            <button hg-button color="primary" (click)="onClick()">Default button</button>
+            <button hg-button color="secondary" (click)="onClick()">Secondary button</button>
+            <button hg-button color="accent" (click)="onClick()">Accent button</button>
         `,
         props: {
             onClick: action('Clicked')
         }
-    }))
+    }), {
+        notes: 'ABC'
+    })
     
     .add('Disabled', () => ({
-        moduleMetadata: {
-            imports: [ButtonModule]
-        },
         template: `
-            <label>
-                <input type="checkbox" [(ngModel)]="disabled" />
-                Disable button
-            </label>
-            <hg-button (click)="onClick()" [disabled]="disabled">Disabled button</hg-button>
+            <button hg-button (click)="onClick()" color="primary" [disabled]="disabled">Primary button</button>
+            <button hg-button (click)="onClick()" color="secondary" [disabled]="disabled">Secondary button</button>
+            <button hg-button (click)="onClick()" color="accent" [disabled]="disabled">Accent button</button>
         `,
         props: {
-            disabled: true,
-            onClick: action('Clicked')
+            disabled: boolean('Disabled', true),
+            onClick: action('Clicked',)
         }
     }))
 
     .add('Rounded', () => ({
-        moduleMetadata: {
-            imports: [ButtonModule]
-        },
         template: `
-        <hg-button (click)="onClick()" rounded>Rounded button</hg-button>
+        <button hg-button color="primary" (click)="onClick()" rounded>Primary button</button>
+        <button hg-button color="secondary" (click)="onClick()" rounded>Secondary button</button>
+        <button hg-button color="accent" (click)="onClick()" rounded>Accent button</button>
         `,
         props: {
             onClick: action('Clicked')

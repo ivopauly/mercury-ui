@@ -1,0 +1,76 @@
+<section fxLayout="row">
+  <div fxFlex="30"></div>
+  <div fxFlex="40">
+    <hg-card>
+      <div id="header">
+        <h1 id="title">
+          Login
+        </h1>
+      </div>
+      <form #loginForm="ngForm">
+        <div fxLayout="row">
+          <div fxFlex="10"></div>
+          <div fxFlex="80">
+            <p class="text-center hg-padding">
+              {{ error }}
+            </p>
+          </div>
+          <div fxFlex="10"></div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="10"></div>
+          <div fxFlex="20" class="text-right hg-padding">
+            <label for="username" class="text-dark">
+              Username
+            </label>
+          </div>
+          <div fxFlex="60" class="hg-padding">
+            <input 
+              hg-input
+              [(ngModel)]="credentials.username"
+              name="username"
+              id="username"
+              autocomplete="off"
+              required
+              />
+          </div>
+          <div fxFlex="10"></div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="10"></div>
+          <div fxFlex="20" class="text-right hg-padding">
+            <label for="password" class="text-dark">
+              Password
+            </label>
+          </div>
+          <div fxFlex="60" class="hg-padding">
+            <input
+              hg-input
+              type="password"
+              name="password"
+              id="password"
+              [(ngModel)]="credentials.password"
+              required
+              />
+          </div>
+          <div fxFlex="10"></div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="10"></div>
+          <div fxFlex="80" class="hg-padding">
+            <button
+              hg-button
+              id="login-button"
+              (click)="login()"
+              color="primary"
+              [disabled]="loginForm.form.invalid">
+              Login
+            </button>
+          </div>
+          <div fxFlex="10"></div>
+        </div>
+      </form>
+    </hg-card>
+  </div>
+  <div fxFlex="30"></div>
+</section>

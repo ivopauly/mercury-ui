@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/angular'
 
-import { CardModule } from 'projects/ui-components/src/public_api'
+import { HgCardModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury Card', module)
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [CardModule]
+            imports: [HgCardModule]
         },
         template: `
         <hg-card>

@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/angular'
 
-import { ListModule } from 'projects/ui-components/src/public_api'
+import { HgListModule } from 'projects/ui-components/src/public_api'
 
 storiesOf('Mercury List', module)
     .add('Default', () => ({
         moduleMetadata: {
-            imports: [ListModule]
+            imports: [HgListModule]
         },
         template: `
         <hg-list>
