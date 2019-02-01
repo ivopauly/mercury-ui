@@ -4,6 +4,42 @@
 
     .hg-button {
         padding: map-deep-get($theme, button, padding);
+
+        &.outline {
+
+            border: 2px solid transparent;
+            background: transparent;
+
+            &.hg-primary {
+                border-color: get-color($theme, primary);
+                color: get-color($theme, primary);
+
+                &:hover {
+                    color: get-color($theme, primary-text);
+                    background: get-color($theme, primary);
+                }
+            }
+
+            &.hg-secondary {
+                border-color: get-color($theme, secondary);
+                color: get-color($theme, secondary);
+
+                &:hover {
+                    color: get-color($theme, secondary-text);
+                    background: get-color($theme, secondary);
+                }
+            }
+
+            &.hg-accent {
+                border-color: get-color($theme, accent);
+                color: get-color($theme, accent);
+
+                &:hover {
+                    color: get-color($theme, accent-text);
+                    background: get-color($theme, accent);
+                }
+            }
+        }
     }
 
 }

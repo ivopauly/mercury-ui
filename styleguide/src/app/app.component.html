@@ -4,7 +4,7 @@
   </div>
 </header>
 <main id="main">
-  <section id="grid">
+  <section id="grid" class="section">
     <h2 class="header">
       <small>
         01.
@@ -70,7 +70,7 @@
       </div>
     </div>
   </section>
-  <section id="typography" fxLayout="row">
+  <section id="typography" class="section">
     <h2 class="header">
       <small>
         02.
@@ -78,8 +78,75 @@
       Typography
     </h2>
     <hr />
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <h1 class="title">
+              Title
+            </h1>
+          </div>
+          <div fxFlex="50">
+            Bold 72px
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <h2 class="sub-title">
+              Subtitle
+            </h2>
+          </div>
+          <div fxFlex="50">
+            Regular 36px
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <h4 class="menu">
+              Body 2 / menu
+            </h4>
+          </div>
+          <div fxFlex="50">
+            Medium 16px
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <p class="paragraph">
+              Paragraph
+            </p>
+          </div>
+          <div fxFlex="50">
+            Regular 15px
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <span class="caption">
+              Caption
+            </span>
+          </div>
+          <div fxFlex="50">
+            Regular 12px
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="50">
+            <a class="button">
+              Button
+            </a>
+          </div>
+          <div fxFlex="50">
+            Medium 14px
+          </div>
+        </div>
+      </div>
+      <div fxFlex="50">
+        Line height and paragraph
+      </div>
+    </div>
   </section>
-  <section id="colors" fxLayout="row">
+  <section id="colors" class="section">
     <h2 class="header">
       <small>
         03.
@@ -87,8 +154,50 @@
       Colors
     </h2>
     <hr />
+    <div fxLayout="row">
+      <div fxFlex="20">
+        <div class="color-wrapper">
+          <div class="color hg-primary"></div>
+          <div class="color-name">
+            Primary
+          </div>
+        </div>
+      </div>
+      <div fxFlex="20">
+        <div class="color-wrapper">
+          <div class="color hg-secondary"></div>
+          <div class="color-name">
+            Secondary
+          </div>
+        </div>
+      </div>
+      <div fxFlex="20">
+        <div class="color-wrapper">
+          <div class="color hg-accent"></div>
+          <div class="color-name">
+            Accent
+          </div>
+        </div>
+      </div>
+      <div fxFlex="20">
+        <div class="color-wrapper">
+          <div class="color hg-dark"></div>
+          <div class="color-name">
+            Dark
+          </div>
+        </div>
+      </div>
+      <div fxFlex="20">
+        <div class="color-wrapper">
+          <div class="color hg-light"></div>
+          <div class="color-name">
+            Light
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="buttons" fxLayout="row">
+  <section id="buttons" class="section">
     <h2 class="header">
       <small>
         04.
@@ -96,8 +205,72 @@
       Buttons
     </h2>
     <hr />
+    <div fxLayout="row">
+      <div fxFlex="50">
+        <div fxLayout="row" class="row">
+          <div fxFlex="16">
+            Normal state
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="primary">
+              Primary button
+            </button>
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="secondary">
+              Secondary button
+            </button>
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="accent">
+              Accent button
+            </button>
+          </div>
+        </div>
+        <div fxLayout="row" class="row">
+          <div fxFlex="16">
+            Hover state
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="primary">
+              Primary button
+            </button>
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="secondary">
+              Secondary button
+            </button>
+          </div>
+          <div fxFlex="28">
+            <button hg-button color="accent">
+              Accent button
+            </button>
+          </div>
+        </div>
+        <div fxLayout="row" class="row">
+            <div fxFlex="16">
+              Disabled state
+            </div>
+            <div fxFlex="28">
+              <button hg-button color="primary" disabled>
+                Primary button
+              </button>
+            </div>
+            <div fxFlex="28">
+              <button hg-button color="secondary" disabled>
+                Secondary button
+              </button>
+            </div>
+            <div fxFlex="28">
+              <button hg-button color="accent" disabled>
+                Accent button
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
   </section>
-  <section id="forms" fxLayout="row">
+  <section id="forms" class="section">
     <h2 class="header">
       <small>
         05.
@@ -106,7 +279,7 @@
     </h2>
     <hr />
   </section>
-  <section id="navigation" fxLayout="row">
+  <section id="navigation" class="section">
     <h2 class="header">
       <small>
         06.
@@ -116,3 +289,5 @@
     <hr />
   </section>
 </main>
+
+<

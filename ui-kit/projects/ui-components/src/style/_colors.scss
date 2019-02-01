@@ -29,4 +29,22 @@
         }
     }
 
+    .hg-dark {
+        background: get-color($theme, dark);
+        color: get-color($theme, light-text);
+
+        &[disabled] {
+            background: lighten(desaturate(get-color($theme, dark), 60%), 20%);
+        }
+    }
+
+    .hg-light {
+        background: get-color($theme, light);
+        color: get-color($theme, dark-text);
+
+        &[disabled] {
+            background: lighten(desaturate(get-color($theme, light), 60%), 20%);
+        }
+    }
+
 }
