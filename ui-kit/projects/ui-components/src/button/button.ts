@@ -23,7 +23,8 @@ import { ColorElement } from '../core/color-element'
  */
 const HOST_ATTRIBUTES = [
     'hg-button',
-    'rounded'
+    'rounded',
+    'outline'
 ]
  
 /**

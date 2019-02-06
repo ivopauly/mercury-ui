@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@import "../../ui-kit/projects/ui-components/src/themes/theme";
+
+$hg-theme: (
+    colors: (
+        primary: #D6231E,
+        secondary: #2E94B5,
+        accent: #F8B500,
+        light: #FFF4E0,
+        dark: #1F2226,
+        primary-text: #FFF4E0
+    ),
+    button: (
+        padding: 12px 24px
+    ),
+    card: (
+        shadow: 0 3px 5px rgba(0, 0, 0, .3)
+    )
+);
+
+@include hg-theme($hg-theme)

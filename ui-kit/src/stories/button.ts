@@ -39,9 +39,31 @@ storiesOf('Mercury Button', module)
 
     .add('Rounded', () => ({
         template: `
-        <button hg-button color="primary" (click)="onClick()" rounded>Primary button</button>
-        <button hg-button color="secondary" (click)="onClick()" rounded>Secondary button</button>
-        <button hg-button color="accent" (click)="onClick()" rounded>Accent button</button>
+            <button hg-button color="primary" (click)="onClick()" rounded>Primary button</button>
+            <button hg-button color="secondary" (click)="onClick()" rounded>Secondary button</button>
+            <button hg-button color="accent" (click)="onClick()" rounded>Accent button</button>
+        `,
+        props: {
+            onClick: action('Clicked')
+        }
+    }))
+
+    .add('Outline', () => ({
+        template: `
+            <button hg-button color="primary" (click)="onClick()" outline>Primary button</button>
+            <button hg-button color="secondary" (click)="onClick()" outline>Secondary button</button>
+            <button hg-button color="accent" (click)="onClick()" outline>Accent button</button>
+        `,
+        props: {
+            onClick: action('Clicked')
+        }
+    }))
+
+    .add('Rounded outline', () => ({
+        template: `
+            <button hg-button color="primary" (click)="onClick()" rounded outline>Primary button</button>
+            <button hg-button color="secondary" (click)="onClick()" rounded outline>Secondary button</button>
+            <button hg-button color="accent" (click)="onClick()" rounded outline>Accent button</button>
         `,
         props: {
             onClick: action('Clicked')
